@@ -1,0 +1,58 @@
+R1
+[
+R1C1
+sin(th5)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) + cos(th5)*(cos(th3)*cos(th4)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)) - sin(th3)*sin(th4)*(cos(th1)*cos(th2) - sin(th1)*sin(th2))),
+
+R1C2
+cos(th5)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) - sin(th5)*(cos(th3)*cos(th4)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)) - sin(th3)*sin(th4)*(cos(th1)*cos(th2) - sin(th1)*sin(th2))),
+
+R1C3
+cos(th3)*sin(th4)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)) + cos(th4)*sin(th3)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)),
+
+R1C4
+95*cos(th1) + 58*cos(th3)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)) + 95*cos(th1)*cos(th2) - 95*sin(th1)*sin(th2) + 60*cos(th3)*sin(th4)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)) + 60*cos(th4)*sin(th3)*(cos(th1)*cos(th2) - sin(th1)*sin(th2))
+]
+
+R2
+[
+R2C1
+cos(th5)*(cos(th3)*cos(th4)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) - sin(th3)*sin(th4)*(cos(th1)*sin(th2) + cos(th2)*sin(th1))) - sin(th5)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)),
+
+R2C2
+- sin(th5)*(cos(th3)*cos(th4)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) - sin(th3)*sin(th4)*(cos(th1)*sin(th2) + cos(th2)*sin(th1))) - cos(th5)*(cos(th1)*cos(th2) - sin(th1)*sin(th2)),
+
+R2C3
+cos(th3)*sin(th4)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) + cos(th4)*sin(th3)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)),
+
+R2C4
+95*sin(th1) + 58*cos(th3)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) + 95*cos(th1)*sin(th2) + 95*cos(th2)*sin(th1) + 60*cos(th3)*sin(th4)*(cos(th1)*sin(th2) + cos(th2)*sin(th1)) + 60*cos(th4)*sin(th3)*(cos(th1)*sin(th2) + cos(th2)*sin(th1))
+]
+
+R3
+[
+R3C1
+cos(th5)*(cos(th3)*sin(th4) + cos(th4)*sin(th3)),
+
+R3C2
+-sin(th5)*(cos(th3)*sin(th4) + cos(th4)*sin(th3)),
+
+R3C3
+sin(th3)*sin(th4) - cos(th3)*cos(th4),
+
+R3C4
+58*sin(th3) - 60*cos(th3)*cos(th4) + 60*sin(th3)*sin(th4) + 135
+]
+
+R4
+[
+R4C1                                                                                                                                                                                                                                  0,
+
+R4C2
+0,
+
+R4C3
+0,
+
+R4C4
+1
+]

@@ -1,0 +1,79 @@
+function [ m ] = invKin( x, y, z, r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3 )
+    disp('XYZ');
+    disp(x);
+    disp(y);
+    disp(z);
+	
+    theta3= asind((z-110*r3c3-135)/58);
+	theta4= asind(r3c3) - theta3;
+	
+	if(theta3+theta4== -90 || theta3+theta4 == 90)
+		a= 95;				%a1
+		b= 58*cosd(theta3)+95; %a2
+		c2= (x^2 + y^2 - a^2 - b^2)/(2*a*b);
+		s2 = sqrt(1-c2^2);
+		
+		numTheta1 = (a+b*c2)*y - b*s2*x;
+		demTheta1 = x^2+y^2;
+		
+		theta2 = atan2d(s2, c2);
+		theta1 = asind(numTheta1/demTheta1);
+		theta5 = atan2d(r1c2,-r1c1)-theta1-theta2;
+	%end
+    else
+        cosExp = cosd(atan2d(r2c3,r1c3));
+        numExp = 58*cosd(theta3) + 95 + 110*cosd(theta3+theta4);
+        theta1= acosd((-1/95)*);
+		theta1= acosd((atan2d(r2c3,r1c3)*(58*cosd(theta3)+95+(110*cosd(theta3+theta4)))-x)*(-1/95))
+		theta2= atan2d(r2c3,r1c3) - theta1;
+		theta5= atan2d(-r3c2,r3c1);
+	end
+	
+	
+    
+    theta1_max_positive = 85;
+    theta1_max_negative = -80;
+    theta2_max_positive = 80;
+    theta2_max_negative = -75;
+    theta3_max_positive = 85;
+    theta3_max_negative = -80;
+    theta4_max_positive = 70;
+    theta4_max_negative = -80;
+    theta5_max_positive = 85;
+    theta5_max_negative = -80;
+
+   
+    if (theta1 > theta1_max_positive) || (theta1 < theta1_max_negative)
+		fprintf("Theta 1 out of bounds [-80,85], %i\n", theta1);
+	end
+
+	if (theta2 > theta2_max_positive) || (theta2 < theta2_max_negative)
+		fprintf("Theta 2 out of bounds [-75,80], %i\n", theta2);
+	end
+
+	if (theta3 > theta3_max_positive) || (theta3 < theta3_max_negative)
+		fprintf("Theta 3 out of bounds [-80,85], %i\n", theta3);
+	end
+
+	if (theta4 > theta4_max_positive) || (theta4 < theta4_max_negative)
+		fprintf("Theta 4 out of bounds [-80,70], %i\n", theta4);
+	end
+
+	if (theta5 > theta5_max_positive) || (theta5 < theta5_max_negative)
+		fprintf("Theta 5 out of bounds [-80,85], %i\n", theta5);
+	end
+
+
+    disp('Thetas');
+    disp(theta1);
+    disp(theta2);
+    disp(theta3);
+    disp(theta4);
+    disp(theta5);
+    
+   
+    m = [];
+	m = [theta1, theta2, theta3, theta4, theta5];
+    
+        
+end

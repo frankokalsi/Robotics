@@ -1,0 +1,42 @@
+R1:
+
+R1C1 = sin(e)*sin(a + b) - cos(e)*cos(a + b)*sin(c + d) 
+
+R1C2 = cos(e)*sin(a + b) + sin(e)*cos*(a + b)*sin(c + d)
+
+R1C3 = cos(a + b)*cos(c + d)
+
+R1C4 = 95*cos(a) + 58*cos(c)*cos(a + b) + 95*cos(a)*cos(b) - 95*sin(a)*sin(b) + 60*cos(c)*cos(d)*cos(a + b) - 60*sin(d)*sin(c)*cos(a + b)
+
+
+R2:
+
+R2C1 = -cos(e)*sin(a + b)*sin(c + d) - sin(e)*cos(a + b)
+
+R2C2 = -cos(e)*cos(a + b) + sin(e)*sin(a + b)*sin(c + d)
+
+R2C3 = sin(a + b)*cos(c + d)
+
+R2C4 = 95*sin(a) + 58*cos(c)*sin(a + b) + 95*sin(a + b) + 60*cos(c)*cos(d)*sin(a + b) - 60*sin(d)*sin(c)*sin(a + b)
+
+
+R3:
+
+R3C1 = cos(e)*cos(c + d)
+
+R3C2 = -sin(e)*cos(c + d)
+
+R3C3 = sin(c + d)
+
+R3C4 = 60*sin(c + d) + 58*sin(c) + 135
+
+
+R4:
+
+R4C1 = 0
+
+R4C2 = 0 
+
+R4C3 = 0
+
+R4C4 = 1
